@@ -1,7 +1,6 @@
 <properties 
-	pageTitle="Submit Hive Queries to HDInsight Hadoop clusters in the Cloud Data Science Process | Azure" 
+	pageTitle="Submit Hive Queries to Hadoop clusters in the advanced analytics process | Microsoft Azure" 
 	description="Process Data from Hive Tables" 
-	metaKeywords="" 
 	services="machine-learning" 
 	solutions="" 
 	documentationCenter="" 
@@ -15,10 +14,10 @@
 	ms.tgt_pltfrm="na" 
 	ms.devlang="na" 
 	ms.topic="article" 
-	ms.date="03/23/2015" 
+	ms.date="03/29/2015" 
 	ms.author="hangzh;bradsev" /> 
 
-#<a name="heading"></a> Submit Hive Queries to HDInsight Hadoop clusters in the Cloud Data Science Process
+#<a name="heading"></a> Submit Hive Queries to HDInsight Hadoop clusters in the advanced analytics process
 
 This document describes various ways of submitting Hive queries to Hadoop clusters managed by an HDInsight service in Azure. Hive queries can be submitted by using: 
 

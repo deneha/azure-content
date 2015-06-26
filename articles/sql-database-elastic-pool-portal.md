@@ -1,19 +1,19 @@
-<properties 
-	pageTitle="Create and manage a SQL Database elastic database pool (preview)" 
-	description="Create a single pool of resources to share across a group of Azure SQL Databases." 
-	services="sql-database" 
-	documentationCenter="" 
-	authors="stevestein" 
-	manager="jeffreyg" 
+<properties
+	pageTitle="Create and manage a SQL Database elastic database pool (preview)"
+	description="Create a single pool of resources to share across a group of Azure SQL Databases."
+	services="sql-database"
+	documentationCenter=""
+	authors="stevestein"
+	manager="jeffreyg"
 	editor=""/>
 
-<tags 
+<tags
 	ms.service="sql-database"
 	ms.devlang="NA"
-	ms.date="04/29/2015" 
-	ms.author="sstein" 
+	ms.date="04/29/2015"
+	ms.author="sstein"
 	ms.workload="data-management" 
-	ms.topic="article" 
+	ms.topic="get-started-article"
 	ms.tgt_pltfrm="NA"/>
 
 
@@ -26,11 +26,11 @@
 This article shows you how to create an elastic pool with the [Azure portal](https://portal.azure.com).
 
 Elastic pools simplify the process of creating, maintaining, and managing both performance and cost for large numbers of databases.
- 
+
 
 > [AZURE.NOTE] Elastic pools are currently in preview, and only available with SQL Database V12  Servers.
 
- 
+
 
 
 ## Prerequisites
@@ -63,9 +63,9 @@ Configure the pool by setting the pricing tier, adding databases, and configurin
 
 ### Pricing tier
 
-An elastic pool's pricing tier is somewhat analogous to a SQL database's service tier. The pricing tier determines the features available to the elastic databases in the pool, and the maximum number of DTUs (DTU MAX), and storage (GBs) available to each database. 
+An elastic pool's pricing tier is somewhat analogous to a SQL database's service tier. The pricing tier determines the features available to the elastic databases in the pool, and the maximum number of DTUs (DTU MAX), and storage (GBs) available to each database.
 
-> [AZURE.NOTE] The preview is currently limited to the **Standard** pricing tier. 
+> [AZURE.NOTE] The preview is currently limited to the **Standard** pricing tier.
 
 | Pricing Tier | DTU MAX per Database |
 | :--- | :--- |
@@ -73,14 +73,14 @@ An elastic pool's pricing tier is somewhat analogous to a SQL database's service
 
 ### Add databases
 
-At any time, you can select the specific databases you want to be included in the pool.  When you create a new pool, Azure recommends the databases that will benefit from being in a pool and marks them for inclusion. You can add all the databases available on the server or you can select or clear databases from the initial list as desired.
+At any time, you can select the specific databases you want to be included in the pool.  When you create a new pool, Azure recommends the databases that will benefit from being in a pool and marks them for inclusion. Azure evaluates the utilization history of databases and recommends an elastic pool when it is more cost effective than using performance levels for single databases. If an elastic pool is recommended, Azure provides recommended amount of pool DTUs, min/max DTU settings for each database in the pool, and a list of recommended databases. In order for database to be considered as a candidate for elastic pool it must exist for at least 14 days and it must not be in Premium pricing tier (public preview is limited to Standard only, therefore Premium DBs are not considered as viable). You can add all the databases available on the server or you can select or clear databases from the initial list as desired.
 
    ![Add databases][5]
 
 When you select a database to be added to a pool, the following conditions must be met:
 
 - The pool must have room for the database (cannot already contain the maximum number of databases). More specifically, the pool must have enough available DTUs to cover the DTU guarantee per database (for example, if the DTU guarantee for the group is 400, and the DTU guarantee for each database is 10, then the maximum number of databases that are allowed in the pool is 40 (400 DTUs/10 DTUs guaranteed per DB = 40 Max databases).
-- The current features used by the database must be available in the pool. 
+- The current features used by the database must be available in the pool.
 
 
 ### Configure performance

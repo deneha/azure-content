@@ -1,7 +1,6 @@
 <properties 
-	pageTitle="Process Data from SQL Azure | Azure" 
+	pageTitle="Process Data from SQL Azure | Microsoft Azure" 
 	description="Process Data from SQL Azure" 
-	metaKeywords="" 
 	services="machine-learning" 
 	solutions="" 
 	documentationCenter="" 
@@ -15,7 +14,7 @@
 	ms.tgt_pltfrm="na" 
 	ms.devlang="na" 
 	ms.topic="article" 
-	ms.date="05/12/2015" 
+	ms.date="05/29/2015" 
 	ms.author="fashah;garye" /> 
 
 #<a name="heading"></a>Process Data in SQL Server Virtual Machine on Azure
