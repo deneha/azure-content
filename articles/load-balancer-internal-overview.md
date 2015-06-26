@@ -80,6 +80,11 @@ Another scenario for the LOB is to have a site to site VPN to the virtual networ
 
 ![Internal load balancing using site to site VPN](./media/load-balancer-internal-overview/IC744150.png)
 
+## Internal Azure Resource Access
+
+The Microsoft Azure platform uses a static, publicly routable IPv4 address for a variety of administrative scenarios. The IP address is 168.63.129.16. This IP address should not be blocked by any firewalls, as it can cause unexpected behavior.
+
+With respect to the Azure ILB, this IP address is used by monitoring probes from the load balancer, to determine health state for VMs in a load balanced set. If a Network Security Group is used to restrict traffic to Azure Virtual Machines in an internally load-balanced set, or is applied to a Virtual Network Subnet, ensure that a Network Security Rule is added to allow traffic from 168.63.129.16.
 
 ## Next Steps
 

@@ -1,5 +1,5 @@
 <properties 
-	pageTitle="Debug your Model in Azure Machine Learning | Azure" 
+	pageTitle="Debug your Model in Azure Machine Learning | Microsoft Azure" 
 	description="Explains how to How to debug your Model in Azure Machine Learning." 
 	services="machine-learning"
 	documentationCenter="" 
@@ -13,7 +13,7 @@
 	ms.tgt_pltfrm="na" 
 	ms.devlang="na" 
 	ms.topic="article" 
-	ms.date="04/21/2015" 
+	ms.date="04/29/2015" 
 	ms.author="bradsev;garye" />
 
 # Debug your Model in Azure Machine Learning
