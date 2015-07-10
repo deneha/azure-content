@@ -13,7 +13,7 @@
 	ms.tgt_pltfrm="na" 
 	ms.devlang="na" 
 	ms.topic="article" 
-	ms.date="06/10/2015" 
+	ms.date="06/24/2015" 
 	ms.author="sdanie"/>
 
 
@@ -25,9 +25,7 @@ See the [Policy Reference][] for a full list of policy statements and their sett
 
 Policies are applied inside the proxy which sits between the API consumer and the managed API. The proxy receives all requests and usually forwards them unaltered to the underlying API. However a policy can apply changes to both the inbound request and outbound response.
 
-Policy expressions can be used as attribute values or text values in any of the API Management policies, unless the policy specifies otherwise. Some policies such as the [Control flow][] and [Set variable][] policies are based on policy expressions. For more information, see [Advanced policies][], [Policy expressions][], and watch the following video.
-
-> [AZURE.VIDEO policy-expressions-in-azure-api-management]
+Policy expressions can be used as attribute values or text values in any of the API Management policies, unless the policy specifies otherwise. Some policies such as the [Control flow][] and [Set variable][] policies are based on policy expressions. For more information, see [Advanced policies][] and [Policy expressions][].
 
 ## <a name="scopes"> </a>How to configure policies
 Policies can be configured globally or at the scope of a [Product][], [API][] or [Operation][]. To configure a policy, navigate to the Policies editor in the Publisher Portal.
@@ -38,7 +36,7 @@ The policies editor consists of three main sections: the policy scope (top), the
 
 ![Policies editor][policies-editor]
 
-To begin configuring a policy you must first select the scope at which the policy should apply. In the screenshot below the 15 Day Free Trial product is selected. Note that the square symbol next to the policy name indicates that a policy is already applied at this level.
+To begin configuring a policy you must first select the scope at which the policy should apply. In the screenshot below the Starter product is selected. Note that the square symbol next to the policy name indicates that a policy is already applied at this level.
 
 ![Scope][policies-scope]
 
@@ -46,7 +44,7 @@ Since a policy has already been applied, the configuration is shown in the defin
 
 ![Configure][policies-configure]
 
-The policy is displayed read-only at first. In order to edit the definition click the Configure Policy action.
+The policy is displayed read-only at first. In order to edit the definition click the **Configure Policy** action.
 
 ![Edit][policies-edit]
 
@@ -106,6 +104,12 @@ In the example policy definition above, the cross-domain statement would execute
 
 Note: A global policy has no parent policy and using the `<base>` element in it has no effect. 
 
+## Next steps
+
+Check out following video on policy expressions.
+
+> [AZURE.VIDEO policy-expressions-in-azure-api-management]
+
 [Policy Reference]: api-management-policy-reference.md
 [Product]: api-management-howto-add-products.md
 [API]: api-management-howto-add-products.md#add-apis 
@@ -123,4 +127,3 @@ Note: A global policy has no parent policy and using the `<base>` element in it 
 [policies-edit]: ./media/api-management-howto-policies/api-management-policies-edit.png
 [policies-restrict]: ./media/api-management-howto-policies/api-management-policies-restrict.png
 [policies-save]: ./media/api-management-howto-policies/api-management-policies-save.png
- 
