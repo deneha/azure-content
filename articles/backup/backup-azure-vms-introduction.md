@@ -106,7 +106,7 @@ It can take a while for the backup vault to be created. Monitor the status notif
 7. Clicking on the backup vault goes to the **Quick Start** page, where the instructions for backup of Azure virtual machines are shown.
 ![Virtual machine backup instructions in the Dashboard page](./media/backup-azure-vms-introduction/vmbackup-instructions.png)
 
-    >[AZURE.NOTE] Ensure that the appropriate storage redundancy option is chosen right after the vault has been created. Read more about [setting the storage redundancy option in the backup vault](https://azure.microsoft.com/en-us/documentation/articles/backup-azure-backup-create-vault/#azure-backup---storage-redundancy-options).
+    >[AZURE.NOTE] Ensure that the appropriate storage redundancy option is chosen right after the vault has been created. Read more about [setting the storage redundancy option in the backup vault](backup-azure-backup-create-vault.md#azure-backup---storage-redundancy-options).
 
 ### 2. VM Agent
 Before you can start to backup the Azure virtual machine, ensure that the Azure VM Agent is correctly installed on the virtual machine. In order to backup the virtual machine, the Azure Backup service installs an extension to the VM Agent. Since the VM agent is an optional component at the time that the virtual machine is created, you need to ensure that the checkbox for the VM agent is selected before the virtual machine is provisioned.
