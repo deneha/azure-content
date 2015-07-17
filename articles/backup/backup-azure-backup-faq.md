@@ -61,8 +61,8 @@ A8. No.
 **Q9. How do I register my server to another datacenter?**<br/>
 A9. In general the backup data is sent to the datacenter of the Backup Service to which it is registered. The easiest way to change the datacenter is to uninstall the agent and reinstall the agent and register to a new datacenter.
 
-**Q10. What happens if I rename a Windows server that is backing up data to Azure?** <br/>
-A10. Any currently configured backups will be stopped. You will need to reregister the server with the backup vault and it will be considered a new server by Recovery Services, so the first backup operation that occurs after registration will be a full backup of all of the data included in the backup instead of just the changes since the last backup occurred. However, if you need to perform a recovery operation you can recover the data that has been backed up using Recover from another server recovery option. For more information, see Rename a server.
+**Q10. What happens if I rename a Windows server which is backing up data to Azure?** <br/>
+A10. Any currently configured backups will be stopped. You will need to reregister the server with the backup vault and it will be considered a new server by Recovery Services, so the first backup operation that occurs after registration will be a full backup of all of the data included in the backup, instead of just the changes since the last backup occurred. However, if you need to perform a recovery operation you can recover the data that has been backed up using Recover from another server recovery option.
 
 **Q11. What types of drives can I backup files and folders from?** <br/>
 A11. The following set of drives/volumes can be backup:
@@ -91,7 +91,8 @@ A12. The following types are supported:
 **Q13. What's the minimum size requirement for the cache folder?** <br/>
 A13. The size of the cache folder is determined by the amount of data that you are backing up. In general you should expect that 10-15% of the space required for data storage should be allocated for the cache folder.
 
-**Q14. How can I isolate specific server data from being recovered by other servers in my organization?**<br/>
+
+**Q14. How I can isolate specific server data from being recovered by other servers in my organization?**<br/>
 A14. Any servers that are registered using the same vault will be able to recover the data backed up by other servers that use the same passphrase. If you have servers that you want to ensure recovery only occurs to specific servers in your organization, you should use a separate passphrase designated for those servers. For example, human resources servers could use one encryption passphrase, accounting servers another, and storage servers a third.
 
 **Q15. Can I “migrate” my backup data between subscriptions?** <br/>
@@ -129,7 +130,7 @@ A3. Yes. Using DPM, you can specify daily, weekly, monthly, yearly scheduling wh
 A4. No, you have the same capabilities. You can specify daily, weekly, monthly and yearly retention policies.
 
 **Q5. Can I configure my retention policies selectively – i.e. configure weekly and daily but not yearly and monthly?**<br/>
-A5. You have the full set of knobs to come up with policies which best define your compliance/retention requirements.
+A5. Yes, the Azure Backup retention structure allows you to have full flexibility in defining the retention policy as per your requirements.
 
 **Q6. Can I “schedule a backup” at 6pm and specify “retention policies” at a different time?**<br/>
 A6. No. Retention policies can only be applied on backup points. In the below image, the retention policy is being specified on backups taken at 12am and 6pm. <br/>
@@ -177,3 +178,8 @@ A3. The encryption key should be at least 16 characters.
 **Q4. What happens if I misplace the encryption key? Can I recover the data (or) can Microsoft recover the data?** <br/>
 A4. The key used to encrypt the backup data is present only on the customer premises. Microsoft does not maintain a copy in Azure and does not have any access to the key. If the customer misplaces the key, Microsoft cannot recover the backup data.
  
+
+<!--Image references-->
+[1]: ./media/backup-azure-backup-faq/Schedule.png
+[2]: ./media/backup-azure-backup-faq/RetentionScreen1.png
+ 
